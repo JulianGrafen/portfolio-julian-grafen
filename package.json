@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-julian-grafen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss ./style.css --dir dest",
+    "watch:css": "postcss ./style.css --dir dest -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^6.0.1",
+    "postcss-cli": "^10.1.0"
+  }
+}
