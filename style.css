@@ -19,6 +19,57 @@ h1{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
+.name{
+  display: flex;
+  height: 16rem;
+  margin-top: -15rem;
+}
+.J, .U, .L, .I, .A, .N {
+  animation-name: wiggleWiggle;
+  animation-duration: 1.25s;
+  animation-direction: alternate;
+  animation-timing-function: steps(2, end);
+  animation-iteration-count: infinite;
+}
+
+.J {
+  animation-delay: 0s;
+}
+
+.U {
+  animation-delay: 0.3s;
+}
+
+.L {
+  animation-delay: 0.5s;
+}
+
+.I {
+  animation-delay: 0.7s;
+}
+
+.A {
+  animation-delay: 0.9s;
+}
+
+.N {
+  animation-delay: 1s;
+}
+
+@keyframes wiggleWiggle {
+  20%,
+  100% {
+    transform: translate(0, 5px);
+  }
+
+  0% {
+    transform: translate(0, 0px);
+  }
+  10% {
+    transform: translate(0, 5px);
+  }
+}
+
 
 h2{
     font-size: 64px;
@@ -151,6 +202,11 @@ font-weight: normal;
     display: flex;
 }
 
+.toolsTip{
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+}
+
 .toolsSection{
     background-color: rgba(45, 86, 79, 0.56);
     height: 50rem;
@@ -160,40 +216,87 @@ font-weight: normal;
     width: 100%;
 }
 
-.toolsList{
-    margin-top: 5rem;
-    list-style: none;
-    display: flex;
-    gap: 5px; 
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: column
+.toolsList {
+  margin-top: 5rem;
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
 }
-  
-  .toolsList li{
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    height: 7rem;
+
+/* Styles for each tool item */
+.toolsList li {
+  /*animation: slide-in 2s;*/
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 5rem; /* Fixed height for each list item */
+  transition-property: height;
+  transition-duration: 4s;
+  width: 200px; /* Fixed width for each list item */
+  padding: 1rem;
+  display: flex;
+  position: relative;
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+
+
+/* Styles for the paragraph inside each tool item */
+.toolsList li p {
+  display: flex;
+  opacity: 0;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.impressum{
+  display: flex;
+  background-color: black;
+  width: 100vw;
+  height: 3rem;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  font-size: 0.7rem;
+
+
+}
+
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
 
-  .toolsList li p{
-    display: flex;
-    position: absolute;
-    margin-left: 7rem;
-    margin-right: 1.5rem;
-    justify-content: flex-end;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+  @keyframes fadeOut{
+    0% { opacity: 1; }
+    100% { opacity: 0; }
   }
   
 
   .toolsList li img {
+    margin-left: 3.5rem;
     height: 80px;
     width: 80px;
-    margin: 1rem;
+  }
+
+  @keyframes slide-in {
+    from{
+      transform: translateY(-100%)}
+    to{transform: translateY(0%)}
+  }
+  @keyframes slide-back {
+    from{ 
+      transform: translateY(0%)}
+    to{transform: translateY(-100%)}
+    
   }

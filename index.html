@@ -20,7 +20,10 @@
     </nav>
     <section class="hero">
         <h1>HELLO, <br> 
-          I'AM JULIAN.</h1>
+          I'AM</h1>
+          <section class="name">
+          <h1 class="J"> J</h1><h1 class="U">U</h1><h1 class="L">L</h1><h1 class="I">I</h1><h1 class="A">A</h1><h1 class="N">N</h1>
+        </section>
         <h2>ACTIVE IN INTERDISCIPLINARY FIELDS. <br>
           FROM START-UP TO DESIGN AND CODING. </h2>
           <!--<img class="portrait" src="assets/ich-crop.png">-->
@@ -47,30 +50,87 @@
         <h1>SKILLS</h1>
     </div>
     <section class="toolsSection">
+      <h3 class="toolsTip">Click on an Icon to learn more about my experiences</h3>
         <ul class="toolsList">
-          <li title="HTML"><p>I'am familar with the usage of HTML 5. I have been using HTML for this portfolio site and many other projects related to Code & Context.</p><img src="./assets/html-icon.svg" alt="HTML Icon"></li>
-          <li title="CSS"><p>I know the basics of CSS 3 like flexbox, grid, animations, transitions and styling. I used CSS for many projects in Code & Context and for this portfolio website.</p><img src="./assets/css-icon.svg" alt="CSS Icon"></li>
-          <li title="DaVinci resolve"><p>I did a few edits with DaVinci Resolve for projects in Code & Context and also did some private video editing with it. I can use the program accordingly and create basic video clips.</p><img src="./assets/davinci-resolve-icon.svg" alt="davinci-resolve Icon"></li>
-          <li title="Figma"><p>Figma</p><img src="./assets/figma-icon.svg" alt="Figma Icon"></li>
-          <li title="Git"><p>Git</p><img src="./assets/git-icon.svg" alt="Git Icon"></li>
-          <li title="Github"><p>GitHub</p><img src="./assets/github-icon.svg" alt="Github Icon"></li>
-          <li title="Javascript"><p>JavaScript</p><img src="./assets/javascript.svg" alt="Javascript Icon"></li>
-          <li title="Notion"><p>Notion</p><img src="./assets/notion-icon.svg" alt="Notion Icon"></li>
-          <li title="React"><p>React</p><img src="./assets/react.svg" alt="React Icon"></li>
-          <li title="Tailwind"><p>TailwindCSS</p><img src="./assets/tailwind-css.svg" alt="Tailwind Icon"></li>
-          <li title="Typescript"><p>Typescript</p><img src="./assets/typescript.svg" alt="Typescript Icon"></li>
-          <li title="Microsoft Word"><p>Word</p><img src="./assets/word.svg" alt="Microsoft Word Icon"></li>
-          <li title="NestJS"><p>NestJS</p><img src="./assets/nestjs.svg" alt="NestJs Icon"></li>
+
+          <li id="htmlBox" title="HTML">
+            <p id="htmlText">I'm familiar with the usage of HTML 5...</p>
+            <img onclick="fadeInText(htmlText),expandBox(htmlBox)" src="./assets/html-icon.svg" alt="HTML Icon">
+          </li>
+          
+          <li id="cssBox" title="CSS">
+            <p id="cssText">I know the basics of CSS 3 like flexbox, grid, animations...</p>
+            <img onclick="fadeInText(cssText),expandBox(cssBox)" src="./assets/css-icon.svg" alt="CSS Icon">
+          </li>
+          
+          <li id="daVinciBox" title="DaVinci resolve">
+            <p id="davinciText">I did a few edits with DaVinci Resolve for projects in Code & Context...</p>
+            <img onclick="fadeInText(davinciText),expandBox(daVinciBox)" src="./assets/davinci-resolve-icon.svg" alt="DaVinci Resolve Icon">
+          </li>
+          
+          <li id="figmaBox" title="Figma">
+            <p id="figmaText">Figma</p>
+            <img onclick="fadeInText(figmaText),expandBox(figmaBox)" src="./assets/figma-icon.svg" alt="Figma Icon">
+          </li>
+          
+          <li id="gitBox" title="Git">
+            <p id="gitText">Git</p>
+            <img onclick="fadeInText(gitText),expandBox(gitBox)" src="./assets/git-icon.svg" alt="Git Icon">
+          </li>
+          
+          <li id="githubBox"title="GitHub">
+            <p id="githubText">GitHub</p>
+            <img onclick="fadeInText(githubText),expandBox(githubBox)" src="./assets/github-icon.svg" alt="GitHub Icon">
+          </li>
+          
+          <li id="jsBox" title="JavaScript">
+            <p id="jsText">JavaScript</p>
+            <img onclick="fadeInText(jsText),expandBox(jsBox)" src="./assets/javascript.svg" alt="JavaScript Icon">
+          </li>
+          
+          <li id="notionBox" title="Notion">
+            <p id="notionText">Notion</p>
+            <img onclick="fadeInText(notionText),expandBox(notionBox)" src="./assets/notion-icon.svg" alt="Notion Icon">
+          </li>
+          
+          <li id="reactBox"title="React">
+            <p id="reactText">React</p>
+            <img onclick="fadeInText(reactText),expandBox(reactBox)" src="./assets/react.svg" alt="React Icon">
+          </li>
+          
+          <li id="tailwindBox"title="Tailwind">
+            <p id="tailwindText">TailwindCSS</p>
+            <img onclick="fadeInText(tailwindText),expandBox(tailwindBox)" src="./assets/tailwind-css.svg" alt="Tailwind Icon">
+          </li>
+          
+          <li id="tsBox"title="TypeScript">
+            <p id="tsText">TypeScript</p>
+            <img onclick="fadeInText(tsText),expandBox(tsBox)" src="./assets/typescript.svg" alt="TypeScript Icon">
+          </li>
+          
+          <li id="msWordBox"title="Microsoft Word">
+            <p id="wordText">Word</p>
+            <img onclick="fadeInText(wordText),expandBox(msWordBox)" src="./assets/word.svg" alt="Microsoft Word Icon">
+          </li>
+          
+          <li id="nestJsBox" title="NestJS">
+            <p id="nestjsText">NestJS</p>
+            <img onclick="fadeInText(nestjsText),expandBox(nestJsBox)" src="./assets/nestjs.svg" alt="NestJS Icon">
+          </li>
 
       </ul>
-    </section class="aboutMe">
-
-    <section >
-
-    <section class="codeAndContext">
-
     </section>
 
-    </section>
+  </section class="aboutMe">
+
+  <section >
+
+  <section class="codeAndContext">
+
+  </section>
+
+  <section class="impressum">
+    <p>Build from ground-up by Julian Gräfen with HTML, JavaScript and CSS</p>
+  </section>
   </body>
 </html>
