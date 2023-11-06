@@ -1,9 +1,15 @@
+
+:root{
+  --blue:rgb(9, 128, 146); 
+  }
+  
 body{
     margin: 0;
     padding: 0;
     width: 100%;
     box-sizing:border-box;
     overflow-x: hidden;
+    background-color: var(--blue);
 
 }
 
@@ -12,6 +18,15 @@ body{
   }*/
   
 
+  .skew-cc{
+    z-index: 1;
+    width:100vw;
+    height:20rem;
+    position:relative;
+    left:0px;
+    background: linear-gradient(to right bottom, #098092 49%, #ffffff 50%),    linear-gradient(-50deg, #ffffff 16px, #000 0);
+  }
+
 
 h1{
     font-size: 128px;
@@ -19,11 +34,33 @@ h1{
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 }
+
+.words {
+  height:4rem;
+  border-radius: 15px;
+  margin-left: 45rem;
+  width: fit-content;
+  display: absolute;
+  margin-top: -25rem;
+
+  color: white;
+  font-size: 64px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(196, 239, 244, 0.494); 
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .name{
   display: flex;
   height: 16rem;
   margin-top: -15rem;
 }
+
+/*
 .J, .U, .L, .I, .A, .N {
   animation-name: wiggleWiggle;
   animation-duration: 1.25s;
@@ -68,10 +105,11 @@ h1{
   10% {
     transform: translate(0, 5px);
   }
-}
+}*/
 
 
 h2{
+  position: absolute;
     font-size: 64px;
     font-family: Helvetica, sans-serif;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -81,6 +119,7 @@ h2{
 
 .a {
     position: relative;
+    margin-top: 0.5rem;
   }
   
   .a::before {
@@ -89,7 +128,7 @@ h2{
       width: 100%;
       height: 4px;
       border-radius: 4px;
-      background-color: rgba(45, 86, 79, 0.56);;
+      background-color: rgba(45, 86, 79, 0.56);
       bottom: 10px;
       left: 0;
       transform-origin: right;
@@ -103,9 +142,9 @@ h2{
 
 .navbar{
     position: fixed;
-    top: 0;
+    top: -2rem;
+    border-radius: 10px;
     padding-top: 1rem;
-    margin-top: 0;
     z-index: 1;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -115,7 +154,7 @@ h2{
     width: 100vw;
     background-color: white;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    height: 2rem;
+    height: 2.5rem;
     background: rgba(255, 255, 255, 0.4);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -130,11 +169,11 @@ h2{
     display: block;
     height:70vw;
     position: relative;
-    background-color: rgba(45, 86, 79, 0.56);
+    background-color: var(--blue);
 }
 
 .projectsDivider{
-    background-color: #728287;
+    background-color: #ffffff;
     height: 15rem;
     position: relative;
     top:-6rem;
@@ -144,27 +183,29 @@ h2{
 }
 
 .projectsContainer{
-    background-color: rgba(45, 86, 79, 0.56);
-    height: 50rem;
+    background-color: white;
+    height: 55rem;
     justify-content: center;
     display: flex;
     position: relative;
     margin-top: -6rem;
     width: 100%;
+    
 }
 
+
 .projectsGrid{
-    display: grid;
+    display:block;
     grid-template-columns: auto auto;
     list-style-type: none;
-    margin-top: 10rem;
-    gap: 10rem;
+    margin-top: 5rem;
+    
   
 
 }
 
 .projectsGrid li{
-    padding-top: 1rem;
+    margin-top: 1rem;
     font-weight: bold;
     font-size: 2rem;
     background-color: white;
@@ -183,7 +224,15 @@ h2{
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.projectsGrid li:hover{
+  transform:translateX(1rem);
+  transition: transform 1s;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(196, 239, 244, 0.494); 
+
+}
+
 .projectsGrid li p{
+color: white;
 margin: 2.5rem;
 position: absolute;
 display: flex;
@@ -194,7 +243,7 @@ font-weight: normal;
 }
 
 .toolsDivider{
-    background-color: #728287;
+    background-color: #ffffff;
     height: 15rem;
     position: relative;
     justify-content: center;
@@ -208,7 +257,8 @@ font-weight: normal;
 }
 
 .toolsSection{
-    background-color: rgba(45, 86, 79, 0.56);
+  color: white;
+    background-color: var(--blue);
     height: 50rem;
     justify-content: center;
     display: flex;
@@ -260,11 +310,11 @@ font-weight: normal;
 .toolsList li:focus {
   transition: transform 1s, height 4s;
   transform: translateY(-0.75em);
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 149, 255, 0.494); 
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(196, 239, 244, 0.494); 
 }
 
 .aboutMeDivider{
-    background-color: #728287;
+    background-color: #f6f6f6;
     height: 15rem;
     position: relative;
     justify-content: center;
@@ -274,26 +324,35 @@ font-weight: normal;
 }
 
 .aboutMe{
+  color: white;
   display: flex;
   width: 100vw;
   height: 40rem;
-  background-color: rgba(45, 86, 79, 0.56);
+  background-color: var(--blue);
   
 }
 
 .aboutMe h2{
   font-size: 2rem;
   font-weight: lighter;
-  margin-left: 5rem;
+  margin-left: 15rem;
   box-shadow: none;
+  text-underline-position: under;
+  -webkit-text-decoration: rgba(45, 86, 79, 0.56) solid underline;
+  text-decoration: rgba(45, 86, 79, 0.56) solid underline;
+  -webkit-text-underline-position: under;
+
 }
+
 
 .aboutMeList{
+  position: absolute;
   list-style-type: none;
   margin-top: 5rem;
-
-
+  margin-left: 12.5rem;
+  
 }
+
 
 .aboutMe li{
   font-size: 1.5rem;
@@ -301,11 +360,47 @@ font-weight: normal;
 }
 
 .aboutMe p{
+  
   font-size: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   margin: 15rem;
+}
 
+.aboutMe a{
+  text-decoration: none;
+}
+
+.codeAndContextDivider{
+  background-color: #ffffff;
+  height: 15rem;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.codeAndContextSection{
+  background-color: var(--blue);
+  height: 50rem;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.codeAndContextSection p{
+   
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  margin: 5rem;
+}
+
+
+.codeAndContextSection img{
+  width: 10rem;
+  height: 5rem;
 }
 
 .impressum{
@@ -348,3 +443,5 @@ font-weight: normal;
     to{transform: translateY(-100%)}
     
   }
+
+  
