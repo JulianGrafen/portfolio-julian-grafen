@@ -1,4 +1,5 @@
 var timesClicked = 1;
+var iconClicked =1;
 var projectClicked= 1;
 var easterEgg = "You are curious (⊙ _ ⊙ )"
        
@@ -19,21 +20,25 @@ function fadeInText(element){
 }
 
 function expandBox(element){
-  timesClicked ++;
-    if (timesClicked % 2 === 0){
+  iconClicked ++;
+  console.log(timesClicked)
+    if (iconClicked % 2 === 0){
         element.style.height="15rem";
     } else {
         element.style.height="5rem";
     }  
 }
 
-function expandProject(project,readMore){
+function expandProject(project,readMore,projectsContainer){
   projectClicked ++;
   console.log(projectClicked);
   if (projectClicked % 2 === 0){
-    project.style.height="17rem";
+    projectsContainer.style.height ="60rem";
     readMore.style.opacity = "0";
+    project.style.height="17rem";
+   
 } else {
+  projectsContainer.style.height ="40rem";
     project.style.height="4rem";
     readMore.style.opacity = "1";
 
