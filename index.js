@@ -1,4 +1,5 @@
 var timesClicked = 1;
+var projectClicked= 1;
 var easterEgg = "You are curious (⊙ _ ⊙ )"
        
 
@@ -18,15 +19,27 @@ function fadeInText(element){
 }
 
 function expandBox(element){
-
+  timesClicked ++;
     if (timesClicked % 2 === 0){
         element.style.height="15rem";
-    
-
     } else {
         element.style.height="5rem";
     }  
 }
+
+function expandProject(project,readMore){
+  projectClicked ++;
+  console.log(projectClicked);
+  if (projectClicked % 2 === 0){
+    project.style.height="17rem";
+    readMore.style.opacity = "0";
+} else {
+    project.style.height="4rem";
+    readMore.style.opacity = "1";
+
+}  
+}
+
 
 
 jQuery(document).ready(function () {
