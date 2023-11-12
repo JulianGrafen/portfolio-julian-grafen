@@ -230,8 +230,9 @@ h2{
     display: flex;
     position: relative;
     margin-top: -6rem;
-    width: 100%;
-    
+    width: 100vw;
+    text-align: justify
+
 }
 
 
@@ -240,9 +241,6 @@ h2{
     grid-template-columns: auto auto;
     list-style-type: none;
     margin-top: 5rem;
-    
-  
-
 }
 
 .projectsGrid li{
@@ -251,13 +249,10 @@ h2{
     margin-top: 1rem;
     font-weight: bold;
     font-size: 2rem;
-    background-color: white;
-    width: 40rem;
     border-radius: 14px;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-    margin-right: 2.5rem;
     background: rgba(255, 255, 255, 0.4);
     border-radius: 16px;
     box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
@@ -305,6 +300,8 @@ font-weight: normal;
   font-family: Geneva, Tahoma, sans-serif;
   font-weight: lighter;
   position: absolute;
+  padding-top: 2rem;
+  margin: 0 auto;
 }
 
 .toolsSection{
@@ -323,6 +320,7 @@ font-weight: normal;
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
+  margin-inline: 1rem;
 }
 
 .toolsList li {
@@ -354,10 +352,10 @@ font-weight: normal;
   font-family: Geneva, Tahoma, sans-serif;
   font-weight: lighter;
   font-size: 1rem;
+
 }
 
-.toolsList li:hover,
-.toolsList li:focus {
+.toolsList li:hover {
   transition: transform 1s, height 4s;
   transform: translateY(-0.75em);
   -webkit-box-shadow: 5px 5px 15px 5px rgba(196, 239, 244, 0.494); 
@@ -545,6 +543,7 @@ font-size: 1rem;
 .projectsContainer{
   margin-top: 10rem;
   max-width: 100vw;
+  height: 25rem;
 }
 
 .projectsGrid{
@@ -552,9 +551,10 @@ font-size: 1rem;
 }
 
 .projectsGrid li{
+  margin-left: -2.5rem;
   width: 100vw;
-  margin-left: -1.5rem;
 }
+
 
 .toolsSection{
   display: flex;
@@ -562,6 +562,7 @@ font-size: 1rem;
 }
 
 .toolsList li img{
+  image-resolution: 200dpi;
   width: 3rem;
   height: 3rem;
   margin-top: 1rem;
@@ -583,34 +584,37 @@ font-size: 1rem;
 }
 
 .textWrapper p{
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-inline: 1rem;
+	text-align: justify
 }
 
 .aboutMeList{
   padding-top: 1rem;
-  margin-top: 1rem;
   margin:  0 auto;
-  position: absolute; 
   }
 
 .skewCodeAndContext{
-  position: absolute;
+  position: relative;
   margin-top: 1.5rem;
   background:rgb(0, 69, 79);
+  height: fit-content;
 }
 
 .skewCodeAndContext img{
   width: 90vw;
   margin: 1rem;
+  height: 9rem;
 }
 
 .codeAndContextSection{
+  margin-top: 5rem;
+  text-align: justify
+
 }
 
 .impressum{
   max-width: 100vw;
   position: absolute;
-margin-top: -13rem;}  
+  margin-top: -13rem;}  
 
 }
