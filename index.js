@@ -1,4 +1,4 @@
-var timesClicked = 1;
+var timesClicked = 0;
 var iconClicked =1;
 var projectClicked= 1;
 var toolClicked =1;
@@ -20,28 +20,6 @@ function fadeInText(element){
     }  
 }
 
-function expandTool(){
-  console.log("section expanded");
-  toolClicked ++;
-  if (toolClicked % 2 === 0){
-    toolsSection.style.height ="60rem";
-   
-} else {
-  toolsSection.style.height ="40rem"
-}  
-}
-
-
-function expandBox(element){
-  iconClicked ++;
-  console.log(timesClicked)
-    if (iconClicked % 2 === 0){
-        element.style.height="15rem";
-    } else {
-        element.style.height="5rem";
-    }  
-}
-
 function expandProject(project,readMore,projectsContainer){
   projectClicked ++;
   console.log(projectClicked);
@@ -57,6 +35,20 @@ function expandProject(project,readMore,projectsContainer){
 
 }  
 }
+
+
+function expandBox(element){
+  iconClicked ++;
+  console.log(timesClicked)
+    if (iconClicked % 2 === 0 && /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+element.style.height ="30rem"  } 
+else if(iconClicked % 2 === 0){
+  element.style.height="15rem"
+}else{
+  element.style.height="5rem"
+}
+}
+
 
 
 
