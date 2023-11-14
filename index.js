@@ -1,6 +1,7 @@
 var timesClicked = 1;
 var iconClicked =1;
 var projectClicked= 1;
+var toolClicked =1;
 var easterEgg = "You are curious (⊙ _ ⊙ )"
        
 
@@ -20,9 +21,9 @@ function fadeInText(element){
 }
 
 function expandTool(){
-  iconClicked ++;
-  console.log(iconClicked);
-  if (projectClicked % 2 === 0){
+  console.log("section expanded");
+  toolClicked ++;
+  if (toolClicked % 2 === 0){
     toolsSection.style.height ="60rem";
    
 } else {
