@@ -19,6 +19,18 @@ function fadeInText(element){
     }  
 }
 
+function expandTool(){
+  iconClicked ++;
+  console.log(iconClicked);
+  if (projectClicked % 2 === 0){
+    toolsSection.style.height ="60rem";
+   
+} else {
+  toolsSection.style.height ="40rem"
+}  
+}
+
+
 function expandBox(element){
   iconClicked ++;
   console.log(timesClicked)

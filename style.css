@@ -307,7 +307,7 @@ font-weight: normal;
 .toolsSection{
   color: white;
     background-color: var(--blue);
-    height: 50rem;
+    /* height: 50rem; */
     justify-content: center;
     display: flex;
     position: relative;
@@ -564,7 +564,8 @@ font-size: 1rem;
 .toolsSection{
   display: flex;
   justify-content: center;
-  height: min(60rem,1000px);
+  border: 2px solid red;
+  /* height: min(60rem,1000px); */
 }
 
 .toolsList li img{
@@ -577,7 +578,6 @@ font-size: 1rem;
 
 .toolsList li{
   display: flex;
-  max-width:4rem;
   width: 4rem;
   justify-content: center;
 }
