@@ -358,7 +358,7 @@ font-weight: normal;
 .toolsList li:hover {
   transition: transform 1s, height 4s;
   transform: translateY(-0.75em);
-  /* -webkit-box-shadow: 5px 5px 15px 5px rgba(196, 239, 244, 0.494);  */
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(196, 239, 244, 0.494);
 }
 
 /*
@@ -555,6 +555,20 @@ font-size: 1rem;
   margin-left: -2.5rem;
   width: 100vw;
 }
+
+.projectsGrid li{
+
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+
+.projectsGrid li:hover,
+.projectsGrid li:focus {
+  -webkit-box-shadow: none; 
+}
+
 
 
 .toolsList{
