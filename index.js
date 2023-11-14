@@ -1,4 +1,4 @@
-var timesClicked = 0;
+var timesClicked = 1;
 var iconClicked =1;
 var projectClicked= 1;
 var toolClicked =1;
