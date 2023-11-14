@@ -352,6 +352,8 @@ font-weight: normal;
   font-family: Geneva, Tahoma, sans-serif;
   font-weight: lighter;
   font-size: 1rem;
+  text-align:left;
+
 
 }
 
@@ -514,9 +516,7 @@ html{
   display: none;
   }
 
-.words{
-  display: none;
-}
+
 
 .navbar{
   border-radius: 0px;
@@ -579,12 +579,15 @@ font-size: 1rem;
   box-shadow: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none ;
+  display: flex;
+  width: 7rem;
+  justify-content: center;
+
 }
 
 .toolsSection{
   display: flex;
   justify-content: center;
-  border: 2px solid red;
   /* height: min(60rem,1000px); */
 }
 
@@ -594,12 +597,6 @@ font-size: 1rem;
   height: 3rem;
   margin-top: 1rem;
   margin-right: 3rem;
-}
-
-.toolsList li{
-  display: flex;
-  width: 4rem;
-  justify-content: center;
 }
 
 .textWrapper{

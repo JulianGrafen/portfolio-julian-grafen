@@ -23,7 +23,7 @@ function expandProject(project,readMore,projectsContainer){
   if (projectClicked % 2 === 0){
     projectsContainer.style.height ="60rem";
     readMore.style.opacity = "0";
-    project.style.height="17rem";
+    project.style.height="30rem";
    
 } else {
   projectsContainer.style.height ="40rem";
