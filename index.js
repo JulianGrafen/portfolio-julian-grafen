@@ -1,28 +1,55 @@
 var timesClicked = 1;
-var iconClicked = 1;
-var projectClicked = 1;
+var iconClicked =1;
+var projectClicked= 1;
+var toolClicked =1;
+       
 
-function fadeInText(element) {
-  timesClicked++;
-  element.style.animation = timesClicked % 2 === 0 ? "fadeIn 2s" : "fadeOut 2s";
-  element.style.opacity = timesClicked % 2 === 0 ? "1" : "0";
+
+function fadeInText(element){
+    timesClicked ++;
+
+    if (timesClicked % 2 === 0){
+        element.style.animation="fadeIn 2s"
+        element.style.opacity="1";
+
+    } else {
+        element.style.animation="fadeOut 2s"
+        element.style.opacity="0";
+    }  
 }
 
-function expandProject(project, readMore, projectsContainer) {
-  projectClicked++;
-  projectsContainer.style.height = projectClicked % 2 === 0 ? "60rem" : "40rem";
-  readMore.style.opacity = projectClicked % 2 === 0 ? "0" : "1";
-  project.style.height = projectClicked % 2 === 0 ? "17rem" : "4rem";
+function expandProject(project,readMore,projectsContainer){
+  projectClicked ++;
+  if (projectClicked % 2 === 0){
+    projectsContainer.style.height ="60rem";
+    readMore.style.opacity = "0";
+    project.style.height="17rem";
+   
+} else {
+  projectsContainer.style.height ="40rem";
+    project.style.height="4rem";
+    readMore.style.opacity = "1";
+
+}  
 }
 
-function expandBox(element) {
-  iconClicked++;
-  element.style.height = (iconClicked % 2 === 0 && /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) ?
-    "30rem" : (iconClicked % 2 === 0 ? "15rem" : "5rem");
+
+function expandBox(element){
+  iconClicked ++;
+    if (iconClicked % 2 === 0 && /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)){
+element.style.height ="30rem"  } 
+else if(iconClicked % 2 === 0){
+  element.style.height="15rem"
+}else{
+  element.style.height="5rem"
+}
 }
 
-$(document).ready(function () {
-  var words = ['</INNOVATION>', '</WEBDEVELOPMENT>', '</CREATIVITY>'],
+
+
+
+jQuery(document).ready(function () {
+var words = ['</INNOVATION>', '</WEBDEVELOPMENT>','</CREATIVITY>'],
     part,
     i = 0,
     offset = 0,
@@ -31,36 +58,43 @@ $(document).ready(function () {
     skip_count = 0,
     skip_delay = 15,
     speed = 70;
+    
+var wordflick = function () {
 
-  var wordflick = function () {
-    setInterval(function () {
+  setInterval(function () {
+    if (forwards) {
+      if (offset >= words[i].length) {
+        ++skip_count;
+        if (skip_count == skip_delay) {
+          forwards = false;
+          skip_count = 0;
+        }
+      }
+    }
+    else {
+      if (offset == 0) {
+        forwards = true;
+        i++;
+        offset = 0;
+        if (i >= len) {
+          i = 0;
+        }
+      }
+    }
+    part = words[i].substr(0, offset);
+    if (skip_count == 0) {
       if (forwards) {
-        if (offset >= words[i].length) {
-          ++skip_count;
-          if (skip_count == skip_delay) {
-            forwards = false;
-            skip_count = 0;
-          }
-        }
-      } else {
-        if (offset == 0) {
-          forwards = true;
-          i++;
-          offset = 0;
-          if (i >= len) {
-            i = 0;
-          }
-        }
+        offset++;
       }
-      part = words[i].substr(0, offset);
-      if (skip_count == 0) {
-        forwards ? offset++ : offset--;
+      else {
+        offset--;
       }
-      $('.words').text(part);
-    }, speed);
-  };
+    }
+    $('.words').text(part);
+  },speed);
+};
 
-  $(document).ready(function () {
-    wordflick();
-  });
+jQuery(document).ready(function () {
+  wordflick();
+});
 });
