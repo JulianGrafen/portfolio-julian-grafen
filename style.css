@@ -454,7 +454,7 @@ font-weight: normal;
   height: 5rem;
 }
 
-.impressum{
+.footer{
   display: flex;
   background-color: black;
   width: 100vw;
@@ -465,7 +465,7 @@ font-weight: normal;
 
 }
 
-.impressum p{
+.footer p{
   font-size: 0.7rem;
   font-weight: lighter;
 }
@@ -569,18 +569,12 @@ font-size: 1rem;
   -webkit-box-shadow: none; 
 }
 
-
-
-.toolsList{
-  margin-inline: 2.4rem;
-}
-
 .toolsList li{
   box-shadow: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none ;
   display: flex;
-  width: 7rem;
+  width: 90px;
   justify-content: center;
 
 }
@@ -635,13 +629,14 @@ font-size: 1rem;
 }
 
 .codeAndContextSection{
-  margin-top: 5rem;
+  position: absolute;
   text-align: justify
 
 }
 
-.impressum{
+.footer{
   position: absolute;
+  margin-top: 80rem;
  }  
 
 }
