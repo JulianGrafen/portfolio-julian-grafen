@@ -387,7 +387,7 @@ font-weight: normal;
 
 .codeAndContextSection{
   background-color: var(--blue);
-  height: max(95rem,1000px);
+  height: 60rem;
   justify-content: center;
   display: flex;
   position: relative;
@@ -414,7 +414,7 @@ font-weight: normal;
   display: flex;
   background-color: black;
   width: 100vw;
-  height: 2.5rem;
+  height: 3rem;
   color: white;
   font-family: Geneva, Tahoma, sans-serif;
   justify-content: center;
@@ -576,7 +576,8 @@ font-size: 1rem;
 
 .codeAndContextSection{
   position: absolute;
-  text-align: justify
+  text-align: justify;
+  height: max(1000px,1600px);
 
 }
 
