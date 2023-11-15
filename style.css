@@ -13,6 +13,10 @@ body{
 
 }
 
+
+
+
+
 /*body::-webkit-scrollbar {
     display: none;
   }*/
@@ -82,7 +86,7 @@ h1{
   margin-left: 45rem;
   width: 42rem;
   display: absolute;
-  margin-top: -25rem;
+  margin-top: -700px;
 
   color: white;
   font-size: 64px;
@@ -100,53 +104,6 @@ h1{
   height: 16rem;
   margin-top: -15rem;
 }
-
-/*
-.J, .U, .L, .I, .A, .N {
-  animation-name: wiggleWiggle;
-  animation-duration: 1.25s;
-  animation-direction: alternate;
-  animation-timing-function: steps(2, end);
-  animation-iteration-count: infinite;
-}
-
-.J {
-  animation-delay: 0s;
-}
-
-.U {
-  animation-delay: 0.3s;
-}
-
-.L {
-  animation-delay: 0.5s;
-}
-
-.I {
-  animation-delay: 0.7s;
-}
-
-.A {
-  animation-delay: 0.9s;
-}
-
-.N {
-  animation-delay: 1s;
-}
-
-@keyframes wiggleWiggle {
-  20%,
-  100% {
-    transform: translate(0, 5px);
-  }
-
-  0% {
-    transform: translate(0, 0px);
-  }
-  10% {
-    transform: translate(0, 5px);
-  }
-}*/
 
 
 h2{
@@ -246,6 +203,7 @@ h2{
 .projectsGrid li{
   height: 4rem;
   color: #ffffff;
+  width: 40rem;
     margin-top: 1rem;
     font-weight: bold;
     font-size: 2rem;
@@ -277,6 +235,7 @@ position: absolute;
 margin-top: 2rem;}
 
 .projectsGrid li p{
+line-height: 120%;
 opacity: 0;
 color: white;
 margin: 2.5rem;
@@ -324,6 +283,7 @@ font-weight: normal;
 }
 
 .toolsList li {
+
   background: rgba(255, 255, 255, 0.4);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); 
@@ -342,6 +302,7 @@ font-weight: normal;
 
 /* Styles for the paragraph inside each tool item */
 .toolsList li p {
+  line-height: 120%;
   display: flex;
   opacity: 0;
   position: absolute;
@@ -363,18 +324,10 @@ font-weight: normal;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(196, 239, 244, 0.494);
 }
 
-/*
-.aboutMeDivider{
-    background-color: #f6f6f6;
-    height: 15rem;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
 
-}*/
 
 .aboutMe{
+  line-height: 150%;
   color: white;
   display: flex;
   width: 100vw;
@@ -392,6 +345,7 @@ font-weight: normal;
 
 
 .aboutMeList{
+  line-height: 150%;
   position: absolute;
   list-style-type: none;
   margin-top: 5rem;
@@ -401,6 +355,7 @@ font-weight: normal;
 
 
 .aboutMe li, p{
+
   font-size: 1.2rem;
   font-family:Geneva, Tahoma, sans-serif;
   font-weight:lighter;
@@ -431,9 +386,8 @@ font-weight: normal;
 }
 
 .codeAndContextSection{
-
   background-color: var(--blue);
-  height: 50rem;
+  height: max(95rem,1000px);
   justify-content: center;
   display: flex;
   position: relative;
@@ -441,6 +395,7 @@ font-weight: normal;
 }
 
 .codeAndContextSection p{
+  line-height: 150%;
   color: #ffffff;
   font-size: 1.2rem;
   font-family:Geneva, Tahoma, sans-serif;
@@ -455,19 +410,17 @@ font-weight: normal;
 }
 
 .footer{
+  position: absolute;
   display: flex;
   background-color: black;
   width: 100vw;
-  height: 3rem;
+  height: 2.5rem;
   color: white;
   font-family: Geneva, Tahoma, sans-serif;
   justify-content: center;
-
-}
-
-.footer p{
   font-size: 0.7rem;
   font-weight: lighter;
+  bottom:0;
 }
 
 
@@ -502,7 +455,7 @@ font-weight: normal;
 
 
 /* Responsive CSS*/
-@media (max-width: 500px){
+@media (max-width: 1000px){
     .body{
       max-width: 100vw;
     }
@@ -578,9 +531,7 @@ font-size: 1rem;
 
 }
 
-.toolsSection{
-  /* height: min(60rem,1000px); */
-}
+
 
 .toolsList li img{
   image-resolution: 200dpi;
@@ -628,10 +579,5 @@ font-size: 1rem;
   text-align: justify
 
 }
-
-.footer{
-  position: absolute;
-  margin-top: 80rem;
- }  
 
 }
