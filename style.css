@@ -180,7 +180,7 @@ h2{
 }
 
 .projectsContainer{
-  transition: height 3s;
+  
     background-color: #316873;
     height: 40rem;
     justify-content: center;
@@ -222,7 +222,7 @@ h2{
 
 .projectsGrid li:hover,
 .projectsGrid li:focus {
-  transition: transform 1s, height 3s;
+  transition: transform 3s, height 1s;
   -webkit-box-shadow: 5px 5px 15px 5px rgba(196, 239, 244, 0.494); 
 }
 
@@ -279,7 +279,7 @@ font-weight: normal;
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
-  margin-inline: 1rem;
+margin-inline: 1.8rem;
 }
 
 .toolsList li {
@@ -319,7 +319,7 @@ font-weight: normal;
 }
 
 .toolsList li:hover {
-  transition: transform 1s, height 4s;
+  transition: transform 1s, height 2s;
   transform: translateY(-0.75em);
   -webkit-box-shadow: 5px 5px 15px 5px rgba(196, 239, 244, 0.494);
 }
@@ -387,11 +387,12 @@ font-weight: normal;
 
 .codeAndContextSection{
   background-color: var(--blue);
-  height: 60rem;
+  height: min(450vw,800px);
   justify-content: center;
   display: flex;
   position: relative;
-  width: 100%;
+  width: 100vw;
+  border: 2px solid red;
 }
 
 .codeAndContextSection p{
@@ -413,14 +414,15 @@ font-weight: normal;
   position: absolute;
   display: flex;
   background-color: black;
-  width: 100vw;
   height: 3rem;
   color: white;
   font-family: Geneva, Tahoma, sans-serif;
   justify-content: center;
   font-size: 0.7rem;
   font-weight: lighter;
-  bottom:0;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
 }
 
 
@@ -565,7 +567,10 @@ font-size: 1rem;
   position: relative;
   margin-top: 1.5rem;
   background:rgb(0, 69, 79);
-  height: fit-content;
+  height: auto ;
+  width: auto;
+  max-height: 170px;
+  max-width: 250px;
 }
 
 .skewCodeAndContext img{
@@ -577,7 +582,6 @@ font-size: 1rem;
 .codeAndContextSection{
   position: absolute;
   text-align: justify;
-  height: max(1000px,1600px);
 
 }
 

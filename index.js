@@ -9,11 +9,11 @@ function fadeInText(element){
     timesClicked ++;
 
     if (timesClicked % 2 === 0){
-        element.style.animation="fadeIn 2s"
+        element.style.animation="fadeIn 5s"
         element.style.opacity="1";
 
     } else {
-        element.style.animation="fadeOut 2s"
+        element.style.animation="fadeOut .5s"
         element.style.opacity="0";
     }  
 }
